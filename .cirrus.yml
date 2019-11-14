@@ -13,7 +13,8 @@ linux_gcc_task:
   container:
     image: gcc:latest
   install_script:
-    apt-get install bison flex
+    - apt-get update
+    - apt-get install build-essential
   build_script:
     - make
     - make check
