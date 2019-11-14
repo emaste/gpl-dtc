@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
 	sohandle = dlopen(argv[1], RTLD_NOW);
 	if (!sohandle)
-		FAIL("Couldn't dlopen() %s", argv[1]);
+		FAIL("Couldn't dlopen() %s: %s", argv[1], dlerror());
 
 	fdt = dlsym(sohandle, "dt_blob_start");
 	if (!fdt)
