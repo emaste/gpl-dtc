@@ -14,7 +14,7 @@ linux_gcc_task:
     image: gcc:latest
   install_script:
     - apt-get update
-    - apt-get install bison flex
+    - apt-get -y install bison flex
   build_script:
     - make
     - make check
