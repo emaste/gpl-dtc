@@ -8,8 +8,6 @@ freebsd_12_task:
     pkg install -y bison gmake pkgconf
   build_script:
     - gmake
-    - gmake check || true
-    - sed -i '' 's?valgrind/memcheck.h??' tests/testutils.d
   test_script:
     - gmake check
 
